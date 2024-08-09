@@ -2,15 +2,22 @@ import styled from "@emotion/styled";
 import bg from "@/assets/images/intro-bg.png";
 import title from "@/assets/images/title.png";
 import MenuButton from "@/components/main/MenuButton";
+import { useNavigate } from "react-router-dom";
 
 const MainPage = () => {
+    const navigate = useNavigate();
+
+    const handleStartClick = () => {
+        navigate("/cesium");
+    };
+
     return (
         <Container>
             <Wrapper>
                 <Group>
                     <Title className='description-hidden'>지구 서버 서비스 종료의 날</Title>
                     <Box>
-                        <MenuButton label='시작하기' />
+                        <MenuButton label='시작하기' onClick={handleStartClick} />
                         <MenuButton label='설명' />
                         <MenuButton label='정보' />
                     </Box>
