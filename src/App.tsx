@@ -1,7 +1,7 @@
-import { Viewer } from "resium";
+import MainPage from "./views/pages/MainPage";
 
 function App() {
-    return <Viewer />;
+    return <MainPage />;
 }
 
 export default App;
