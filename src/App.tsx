@@ -1,7 +1,7 @@
-import MainPage from "./views/pages/MainPage";
+import LazyLoad from "./routers/LazyLoad";
 
 function App() {
-    return <MainPage />;
+    return <LazyLoad />;
 }
 
 export default App;
