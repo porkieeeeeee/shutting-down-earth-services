@@ -4,13 +4,18 @@ import { keyframes } from "@emotion/react";
 const Loading = () => {
     return (
         <SvgContainer>
-            <Svg viewBox='0 0 128 128' width='128px' height='128px'>
-                <g fill='var(--primary)'>
+            <Svg viewBox='0 0 148 148' width='128px' height='128px'>
+                <g fill='#000' filter='url(#shadow)' transform='translate(10, 10)'>
                     <Rect rx='8' ry='8' width='64' height='64' transform='translate(64, 0)' />
                     <RectGroup transform='scale(-1,-1)'>
                         <Rect rx='8' ry='8' width='64' height='64' transform='translate(64, 0)' />
                     </RectGroup>
                 </g>
+                <defs>
+                    <filter id='shadow' x='-50%' y='-50%' width='200%' height='200%'>
+                        <feDropShadow dx='0' dy='0' stdDeviation='3' floodColor='#0bacc950' />
+                    </filter>
+                </defs>
             </Svg>
         </SvgContainer>
     );
@@ -53,8 +58,8 @@ const SvgContainer = styled.div`
 
 const Svg = styled.svg`
     display: block;
-    width: 8em;
-    height: 8em;
+    width: 200px;
+    height: 200px;
 `;
 
 const Rect = styled.rect`
