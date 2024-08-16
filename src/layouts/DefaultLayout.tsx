@@ -11,6 +11,7 @@ const DefaultLayout = ({ children }: IDefaultLayoutProps) => {
 const Container = styled.div`
     width: 100%;
     height: 100vh;
+    overflow-y: hidden;
 `;
 
 export default DefaultLayout;
